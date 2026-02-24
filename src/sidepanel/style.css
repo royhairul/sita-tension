@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Dark Theme (default) ── */
+:root,
+[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: rgba(30, 41, 59, 0.7);
+  --bg-card-hover: rgba(30, 41, 59, 0.85);
+  --bg-elevated: rgba(255, 255, 255, 0.05);
+  --bg-elevated-hover: rgba(255, 255, 255, 0.08);
+  --bg-input: rgba(255, 255, 255, 0.03);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(255, 255, 255, 0.1);
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --text-footer: #475569;
+  --accent-indigo: #6366f1;
+  --accent-violet: #8b5cf6;
+  --accent-indigo-bg: rgba(99, 102, 241, 0.15);
+  --accent-indigo-bg-light: rgba(99, 102, 241, 0.08);
+  --accent-indigo-border: rgba(99, 102, 241, 0.15);
+  --accent-violet-bg: rgba(139, 92, 246, 0.08);
+  --accent-success: #34d399;
+  --accent-success-bg: rgba(52, 211, 153, 0.1);
+  --accent-success-glow: rgba(52, 211, 153, 0.5);
+  --accent-warning: #fbbf24;
+  --accent-warning-bg: rgba(251, 191, 36, 0.1);
+  --accent-danger: #f87171;
+  --accent-danger-bg: rgba(248, 113, 113, 0.1);
+  --accent-blue: #60a5fa;
+  --accent-blue-bg: rgba(96, 165, 250, 0.1);
+  --accent-blue-glow: rgba(96, 165, 250, 0.4);
+  --accent-violet-glow: rgba(167, 139, 250, 0.4);
+  --scroll-thumb: rgba(255, 255, 255, 0.1);
+  --scroll-thumb-hover: rgba(255, 255, 255, 0.2);
+  --header-gradient: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.08) 100%);
+  --logo-bg: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+  --panel-btn-bg: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(139, 92, 246, 0.08));
+  --panel-btn-bg-hover: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.15));
+  --panel-btn-border: rgba(99, 102, 241, 0.3);
+  --panel-btn-border-hover: rgba(99, 102, 241, 0.5);
+  --panel-btn-text: #a5b4fc;
+  --panel-btn-text-hover: #c7d2fe;
+  --avatar-gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
+  --hint-gradient: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.06) 100%);
+  --progress-seminar: linear-gradient(90deg, #60a5fa, #3b82f6);
+  --progress-sidang: linear-gradient(90deg, #a78bfa, #8b5cf6);
+  --border-footer: rgba(255, 255, 255, 0.04);
+  --revisi-border-top: rgba(255, 255, 255, 0.05);
+  --hero-gradient: linear-gradient(160deg, rgba(251, 191, 36, 0.08) 0%, rgba(245, 158, 11, 0.04) 40%, transparent 70%);
+  --hero-blob: rgba(251, 191, 36, 0.12);
+  --hero-btn-bg: rgba(255, 255, 255, 0.06);
+  --status-card-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* ── Light Theme ── */
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --bg-elevated: rgba(0, 0, 0, 0.03);
+  --bg-elevated-hover: rgba(0, 0, 0, 0.05);
+  --bg-input: rgba(0, 0, 0, 0.02);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.12);
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-dim: #94a3b8;
+  --text-footer: #94a3b8;
+  --accent-indigo: #4f46e5;
+  --accent-violet: #7c3aed;
+  --accent-indigo-bg: rgba(79, 70, 229, 0.1);
+  --accent-indigo-bg-light: rgba(79, 70, 229, 0.06);
+  --accent-indigo-border: rgba(79, 70, 229, 0.15);
+  --accent-violet-bg: rgba(124, 58, 237, 0.06);
+  --accent-success: #059669;
+  --accent-success-bg: rgba(5, 150, 105, 0.1);
+  --accent-success-glow: rgba(5, 150, 105, 0.3);
+  --accent-warning: #d97706;
+  --accent-warning-bg: rgba(217, 119, 6, 0.1);
+  --accent-danger: #dc2626;
+  --accent-danger-bg: rgba(220, 38, 38, 0.1);
+  --accent-blue: #2563eb;
+  --accent-blue-bg: rgba(37, 99, 235, 0.08);
+  --accent-blue-glow: rgba(37, 99, 235, 0.25);
+  --accent-violet-glow: rgba(124, 58, 237, 0.25);
+  --scroll-thumb: rgba(0, 0, 0, 0.12);
+  --scroll-thumb-hover: rgba(0, 0, 0, 0.2);
+  --header-gradient: linear-gradient(135deg, rgba(79, 70, 229, 0.08) 0%, rgba(124, 58, 237, 0.04) 100%);
+  --logo-bg: linear-gradient(135deg, rgba(79, 70, 229, 0.12), rgba(124, 58, 237, 0.12));
+  --panel-btn-bg: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(124, 58, 237, 0.05));
+  --panel-btn-bg-hover: linear-gradient(135deg, rgba(79, 70, 229, 0.15), rgba(124, 58, 237, 0.1));
+  --panel-btn-border: rgba(79, 70, 229, 0.2);
+  --panel-btn-border-hover: rgba(79, 70, 229, 0.4);
+  --panel-btn-text: #4f46e5;
+  --panel-btn-text-hover: #4338ca;
+  --avatar-gradient: linear-gradient(135deg, #4f46e5, #7c3aed);
+  --hint-gradient: linear-gradient(135deg, rgba(79, 70, 229, 0.06) 0%, rgba(124, 58, 237, 0.03) 100%);
+  --progress-seminar: linear-gradient(90deg, #3b82f6, #2563eb);
+  --progress-sidang: linear-gradient(90deg, #8b5cf6, #7c3aed);
+  --border-footer: rgba(0, 0, 0, 0.06);
+  --revisi-border-top: rgba(0, 0, 0, 0.06);
+  --hero-gradient: linear-gradient(160deg, rgba(251, 191, 36, 0.12) 0%, rgba(254, 215, 170, 0.1) 40%, transparent 70%);
+  --hero-blob: rgba(251, 191, 36, 0.15);
+  --hero-btn-bg: rgba(255, 255, 255, 0.7);
+  --status-card-bg: rgba(255, 255, 255, 0.75);
+}
+
+html, body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  width: 100%;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Shared card styles */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  backdrop-filter: blur(12px);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.card-icon {
+  font-size: 16px;
+}
+
+.card-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover);
+}
