@@ -7,12 +7,15 @@ export default defineManifest({
   description: 'Monitor progres Tugas Akhir dari sistem SITA Poliwangi secara cepat.',
   version: pkg.version,
   icons: {
-    48: 'public/logo.png',
-    128: 'public/logo.png',
+    16: 'icons/logo16.png',
+    48: 'icons/logo48.png',
+    128: 'icons/logo128.png',
   },
   action: {
     default_icon: {
-      48: 'public/logo.png',
+      16: 'icons/logo16.png',
+      48: 'icons/logo48.png',
+      128: 'icons/logo128.png',
     },
   },
   background: {
@@ -30,4 +33,8 @@ export default defineManifest({
   side_panel: {
     default_path: 'src/sidepanel/index.html',
   },
+  web_accessible_resources: [{
+    resources: ['icons/*.png', 'assets/*.png'],
+    matches: ['<all_urls>'],
+  }],
 })
